@@ -1,0 +1,40 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "D:\\final\\real-estate-liquidity-main\\blockchain\\contracts\\DemandSimulator.sol": {
+      "lastModificationDate": 1771667080562,
+      "contentHash": "3d91bfd5f84d9abc600f3a8e3a529899",
+      "sourceName": "contracts/DemandSimulator.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.18"
+      ],
+      "artifacts": [
+        "DemandSimulator"
+      ]
+    }
+  }
+}
