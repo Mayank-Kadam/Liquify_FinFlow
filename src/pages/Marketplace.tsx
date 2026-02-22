@@ -169,7 +169,8 @@ export default function Marketplace() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
           {offerings.map((offering, i) => {
-            const fundingPct = (offering.tokensSold / offering.totalTokens) * 100;
+            const publicTokens = Math.floor(offering.totalTokens * 0.8);
+            const fundingPct = (offering.tokensSold / publicTokens) * 100;
             return (
               <motion.div
                 key={offering.id}
@@ -200,7 +201,7 @@ export default function Marketplace() {
                   <div className="grid grid-cols-2 gap-3 text-xs">
                     <div>
                       <p className="text-muted-foreground text-[10px] uppercase tracking-wider mb-0.5">Tokens Sold</p>
-                      <p className="font-mono font-semibold text-foreground">{offering.tokensSold.toLocaleString()} / {offering.totalTokens.toLocaleString()}</p>
+                      <p className="font-mono font-semibold text-foreground">{offering.tokensSold.toLocaleString()} / {publicTokens.toLocaleString()}</p>
                     </div>
                     <div>
                       <p className="text-muted-foreground text-[10px] uppercase tracking-wider mb-0.5">Capital Raised</p>
