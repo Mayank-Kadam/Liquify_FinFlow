@@ -1,73 +1,118 @@
-# Welcome to your Lovable project
+# Liqui-FI  
+### AI-Powered Instant Liquidity for Tokenized Real Estate
 
-## Project info
+Liqui-FI is a production-grade simulation platform that demonstrates how real-world real estate assets can be tokenized and traded with instant liquidity using an AI-powered Automated Market Maker (AMM).
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This project was built to simulate institutional-grade real estate tokenization with dynamic pricing, liquidity pools, and structured token issuance.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+##  Overview
 
-**Use Lovable**
+Real estate is one of the largest asset classes globally, yet it remains highly illiquid and capital-intensive.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Liqui-FI solves this by enabling:
 
-Changes made via Lovable will be committed automatically to this repo.
+- Fractional real estate ownership
+- Instant buy & sell via AMM
+- AI-driven dynamic pricing
+- IPO-style asset issuance
+- Real-time portfolio tracking
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+##  Core Features
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Primary Asset Issuance
+- Property owners tokenize assets
+- 80% public allocation (investor sale)
+- 20% liquidity allocation (AMM reserve)
+- Automatic transition to secondary market
 
-Follow these steps:
+###  Automated Market Maker (AMM)
+Implements constant-product liquidity logic:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Where:
+- x = available token supply
+- y = liquidity pool balance
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Buy → Supply decreases → Price increases  
+Sell → Supply increases → Price decreases  
 
-# Step 3: Install the necessary dependencies.
-npm i
+Strict directional enforcement ensures:
+- Buy always increases price
+- Sell always decreases price
+- ±5% movement cap per transaction
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+###  AI Pricing Engine
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Unified pricing model includes:
 
-**Use GitHub Codespaces**
+- Net demand ratio impact
+- Sell pressure adjustment
+- Liquidity stress modifier
+- Volatility coefficient
+- Stability guard
+- AI confidence score
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+All pricing flows through a single calculation engine to avoid contradictory logic.
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+###  Institutional Dashboard
 
-- Vite
-- TypeScript
+- Portfolio tracking
+- Unrealized P/L
+- Liquidity depth meter
+- Risk indicator
+- AI confidence score
+- Animated price charts
+- Transaction history
+
+---
+
+##  Architecture
+
+**Frontend**
 - React
-- shadcn-ui
-- Tailwind CSS
+- TypeScript
+- TailwindCSS
+- Recharts
+- Framer Motion
 
-## How can I deploy this project?
+**State Management**
+- Zustand
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+**Pricing Logic**
+- Custom AMM engine
+- AI-based dynamic pricing model
+- Unified calculation pipeline
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+##  Token Lifecycle
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Asset is issued via primary offering  
+2. 80% tokens sold to investors  
+3. 20% tokens seeded into liquidity pool  
+4. Asset transitions to secondary AMM trading  
+5. Investors trade instantly with dynamic pricing  
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+##  Business Model
+
+- 0.5% transaction fee
+- Asset listing fee
+- Liquidity spread margin
+- Institutional integration (future roadmap)
+
+---
+
+##  Run Locally
+
+```bash
+npm install
+npm run dev
